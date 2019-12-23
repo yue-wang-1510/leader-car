@@ -1,0 +1,70 @@
+
+
+<view class='top'>
+  <view class='top-text'> 选择速度</view>
+
+  <view class='top-selected' bindtap='bindShowMsg'>
+    <text>{{grade_name}}</text>
+    <image src='/images/xia.png'></image>
+  </view>
+
+  <view class="select_box" wx:if="{{select}}">
+    <view wx:for="{{grades}}" wx:key="unique">
+      <view class="select_one" bindtap="mySelect" data-name="{{item}}">{{item}}</view>
+    </view>
+  </view>
+</view>
+
+
+<button class='begin'>
+
+<view>开始</view>
+</button>
+<button class='end'>结束</button>
+
+
+
+<view class='care'>注意天气情况哦</view>
+<view class='page'>
+  
+  <view class='body'>
+    
+    <view class='city'>
+      <text>{{city}}</text>
+    </view>
+   
+    <view>
+      <text>{{date}}</text>
+    </view>
+    
+    <view>
+      <image src='{{pic}}' mode='aspectFit' style='width:250rpx;height:250rpx'></image>
+    </view>
+ 
+  </view>
+  
+  <view class='ubottom'>
+    
+    <view class='weather'>
+      <text>{{weather}}</text>
+    </view>
+    
+    <view class='right'>
+      
+      <view class='wind'>
+        <text>{{wind}}</text>
+      </view>
+      
+      <view class='temp'>
+        <text>{{temp}}</text>
+      </view>
+    
+    </view>
+  
+  </view>
+</view>
+<view class="weather"> 
+  <text>{{weatherData}}</text> 
+</view>
+
+

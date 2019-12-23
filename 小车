@@ -1,0 +1,61 @@
+
+if(((solution(PassageReceive, "show_S1")) == "1挡")) {
+		if(((solution(PassageReceive, "show_S1")) == "开始")) {
+			if((((analogRead(A0))-(analogRead(A2))) < 10)) {
+				motor.setSpeed1(75);
+				motor.setSpeed2(75);
+			}
+			if((((analogRead(A2))-(analogRead(A0))) > 600)) {
+				motor.setSpeed1(75);
+				motor.setSpeed2(25);
+			}
+			if((((analogRead(A0))-(analogRead(A2))) > 600)) {
+				motor.setSpeed1(25);
+				motor.setSpeed2(75);
+			}
+		}
+		if(((solution(PassageReceive, "show_S1")) == "结束")) {
+			motor.setSpeed1(BRAKE);
+			motor.setSpeed2(BRAKE);
+		}
+	}
+	if(((solution(PassageReceive, "show_S1")) == "2挡")) {
+		if(((solution(PassageReceive, "show_S1")) == "开始")) {
+			if((((analogRead(A0))-(analogRead(A2))) < 10)) {
+				motor.setSpeed1(125);
+				motor.setSpeed2(125);
+			}
+			if((((analogRead(A2))-(analogRead(A0))) > 600)) {
+				motor.setSpeed1(125);
+				motor.setSpeed2(75);
+			}
+			if((((analogRead(A0))-(analogRead(A2))) > 600)) {
+				motor.setSpeed1(75);
+				motor.setSpeed2(150);
+			}
+		}
+		if(((solution(PassageReceive, "show_S1")) == "结束")) {
+			motor.setSpeed1(BRAKE);
+			motor.setSpeed2(BRAKE);
+		}
+	}
+	if(((solution(PassageReceive, "show_S1")) == "3挡")) {
+		if(((solution(PassageReceive, "show_S1")) == "开始")) {
+			if((((analogRead(A0))-(analogRead(A2))) < 10)) {
+				motor.setSpeed1(175);
+				motor.setSpeed2(175);
+			}
+			if((((analogRead(A2))-(analogRead(A0))) > 600)) {
+				motor.setSpeed1(175);
+				motor.setSpeed2(125);
+			}
+			if((((analogRead(A0))-(analogRead(A2))) > 600)) {
+				motor.setSpeed1(125);
+				motor.setSpeed2(175);
+			}
+		}
+		if(((solution(PassageReceive, "show_S1")) == "结束")) {
+			motor.setSpeed1(BRAKE);
+			motor.setSpeed2(BRAKE);
+		}
+	}
